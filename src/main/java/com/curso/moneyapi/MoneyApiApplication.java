@@ -7,7 +7,6 @@ import org.springframework.boot.context.properties.EnableConfigurationProperties
 import com.curso.moneyapi.config.property.MoneyApiProperty;
 
 @SpringBootApplication
-
 @EnableConfigurationProperties(MoneyApiProperty.class)
 public class MoneyApiApplication {
 

@@ -1,4 +1,4 @@
-package com.curso.moneyapi.repository.lancamento;
+package com.curso.moneyapi.repository.pessoa;
 
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;

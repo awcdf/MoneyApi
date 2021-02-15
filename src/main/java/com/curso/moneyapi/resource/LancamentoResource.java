@@ -20,6 +20,7 @@ import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseStatus;
@@ -85,6 +86,13 @@ public class LancamentoResource {
 	@ResponseStatus(code = HttpStatus.NO_CONTENT)
 	public void removerLancamento(@PathVariable Long codigo) {
 		 lancamentoRepository.deleteById(codigo);
+	}
+	
+	@PutMapping("/{codigo}")
+	@PreAuthorize("hasAuthority('ROLE_CADASTRAR_LANCAMENTO') and #oauth2.hasScope('write')")
+	public ResponseEntity<Lancamento> atualizar(@PathVariable Long codigo,@Valid @RequestBody Lancamento lancamento){
+		Lancamento lancamentoSalvo = lancamentoService.atualizar(codigo, lancamento);
+		return ResponseEntity.ok(lancamentoSalvo);
 	}
 	
 	@ExceptionHandler({PessoaInexistenteOuInativaException.class})

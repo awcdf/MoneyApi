@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.curso.moneyapi.config.property.MoneyApiProperty;
 
 @RestController
-@RequestMapping("/tokens")
+@RequestMapping("/token")
 public class TokenResource {
 	
 	@Autowired

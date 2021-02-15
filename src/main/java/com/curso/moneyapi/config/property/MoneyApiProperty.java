@@ -5,7 +5,7 @@ import org.springframework.boot.context.properties.ConfigurationProperties;
 @ConfigurationProperties("money")
 public class MoneyApiProperty {
 	
-	private String originPermitida = "http://localhost:9000";
+	private String originPermitida = "http://localhost:4200";
 	
 	public String getOriginPermitida() {
 		return originPermitida;

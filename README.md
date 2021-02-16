@@ -3,5 +3,6 @@
 * API REST
 * https://wendelmoney-api.herokuapp.com
 * integration with Money-UI github project
-* Tool: Spring Tool Suite
+* Tool: Spring Tool Suite, MySQL Workbench, Postman
+
 

@@ -2,6 +2,6 @@
 * BackAnd Aplication
 * API REST
 * https://wendelmoney-api.herokuapp.com
-* integration with Money-UI
+* integration with Money-UI github project
 * Tool: Spring Tool Suite
 
